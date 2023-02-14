@@ -1,0 +1,26 @@
+
+<div class="container mt-5">
+<table style="border: 2px black;" class="table">
+  <thead>
+    <tr>
+      <th>Browser Name</th>
+      <th>OS Name</th>
+      <th>IP Address</th>
+      <th>Login Time</th>
+      <th>Logout Time</th>
+      <th>Session Duration (in Minutes)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let activity of userActivity">
+      <td>{{ activity.browserName }}</td>
+      <td>{{ activity.osName }}</td>
+      <td>{{ activity.ipAddress }}</td>
+      <td>{{ activity.loginTime }}</td>
+      <td>{{ activity.logoutTime }}</td>
+      <td>{{ activity.sessionDuration }}</td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary text-center" (click)="logout()">Logout</button>
+</div>
